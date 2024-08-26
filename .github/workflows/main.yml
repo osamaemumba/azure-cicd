@@ -1,1 +1,15 @@
+on: [push]
+name: AzureARMSample
 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: azure/login@v2
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - uses: azure/arm-deploy@v2
+      with:
+        resourceGroupName: myfirstrg
+        template: ./azuredeploy.json
