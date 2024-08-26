@@ -51,18 +51,13 @@
         "name": "[parameters('storageAccountType')]"
       },
       "kind": "StorageV2",
-      "properties": {},
-      "resources": [
-        {
-          "type": "blobServices/containers",
-          "apiVersion": "2019-06-01",
-          "name": "container1",
-          "dependsOn": [
-            "[parameters('storageAccountName')]"
-          ]
-        }
-      ]
-
+      "properties": {}
+    },
+    {
+  "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+  "apiVersion": "2023-01-01",
+  "name": "container1",
+  "properties": {}
     }
   ],
   "outputs": {
