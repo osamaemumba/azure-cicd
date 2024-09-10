@@ -1,4 +1,5 @@
-$dataBricksResourceId  = "517183117086332"
+$dataBricksResourceId  = "2ff814a6-3304-4ab8-85cb-cd0e6f879c1d"
+$uriroot = "https://adb-517183117086332.12.azuredatabricks.net"
 
 # Assume that you have already logged in to Azure using Connect-AzAccount
 # Connect-AzAccount -Tenant $tenantId
@@ -19,11 +20,11 @@ $body = @{
 } | ConvertTo-Json
 
 $headers = @{
-    "Authorization"="Bearer " + "$zureADToken";
+    "Authorization"="Bearer " + "$azureADToken";
     "Content-Type"="application/json";
 }
 
-$uri = "$uriroot/2.0/clusters/create"
+$uri = "$uriroot/api/2.0/clusters/create"
 
 Write-Host $uri
 Write-Host $headers
