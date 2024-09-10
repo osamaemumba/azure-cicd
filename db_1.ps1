@@ -1,3 +1,5 @@
+Connect-AzAccount -Identity -AccountId testIdentity
+
 $dataBricksResourceId  = "2ff814a6-3304-4ab8-85cb-cd0e6f879c1d"
 $uriroot = "https://adb-517183117086332.12.azuredatabricks.net"
 
